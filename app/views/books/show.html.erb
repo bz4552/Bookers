@@ -1,0 +1,23 @@
+<head>
+  <p id="notice"></p>
+  <title>Bookers</title>
+</head>
+<body>
+  <%= flash[:notice] %>
+  <p>
+    <strong>Title:</strong>
+    <%= @book.title %>
+  </p>
+  <p>
+    <strong>Body:</strong>
+    <%= @book.body %>
+  </p>
+  
+  <%= link_to "Edit", edit_book_path(@book) %>
+  " | 
+  "
+  <a class="back" href="/books">Back</a>
+  <div id="UMS_TOOLTIP" style="position: absolute; cursor: pointer; z-index: 2147483647; background: transparent; top: -100000px; left: -100000px;"></div>
+  <%= form_with model: @book, local:true do |f| %>
+  <% end %>
+</body>
